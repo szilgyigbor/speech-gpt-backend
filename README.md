@@ -1,6 +1,7 @@
 # OpenAI Flask Backend Server
 
 This is a backend server built with Python and Flask to interface with two OpenAI models: Whisper and GPT-3.5.
+(OpenAi API key required)
 
 ## Features
 
