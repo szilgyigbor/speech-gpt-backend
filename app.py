@@ -5,7 +5,7 @@ from get_bot_answer import get_answer
 
 app = Flask(__name__)
 # CORS(app)   # Enables CORS for all routes
-CORS(app, resources={"/api2/*": {"origins": "http://localhost:4200"}})  # Enables CORS only for this route
+CORS(app, resources={"/pia/*": {"origins": "*"}})
 
 
 @app.route('/')
@@ -13,9 +13,8 @@ def hello():
     return "hello"
 
 
-@app.route('/api2/transcribe', methods=['POST'])
+@app.route('/pia/transcribe', methods=['POST'])
 def transcribe_endpoint():
-    # Check if a file was received in the request
     if 'audioFile' not in request.files:
         return jsonify({'error': 'No file found'})
 
@@ -26,7 +25,7 @@ def transcribe_endpoint():
     return jsonify(transcription)
 
 
-@app.route('/api2/get-answer', methods=['POST'])
+@app.route('/pia/get-answer', methods=['POST'])
 def answer_endpoint():
     message_history = request.get_json()
     messages = get_answer(message_history)
@@ -35,4 +34,4 @@ def answer_endpoint():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=1300)
