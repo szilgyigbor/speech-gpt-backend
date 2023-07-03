@@ -1,7 +1,7 @@
 import openai
-from api_keys import API_KEY
+import os
 
-openai.api_key = API_KEY
+openai.api_key = os.getenv('BotApiKey')
 
 
 def get_answer(message_history):
