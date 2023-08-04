@@ -33,4 +33,18 @@ The project uses the following technologies:
 You can make POST requests to the following endpoints:
 - '/pia/transcribe': Convert audio input into text using the Whisper model.
 - '/pia/get-answer': Generate a response based on textual input using the GPT-3.5 model.
+
+## Live Demo
+
+A live demo of this application is available at the following URL: [www.digitalisjatszoter.hu](https://www.digitalisjatszoter.hu). Feel free to explore and test the features in a real-world scenario!
+
+## Related Projects
+
+This frontend application is part of a larger project that includes two other repositories:
+
+- [Free Time Spender Backend](https://github.com/szilgyigbor/free_time_spender_web) - The ASP.NET backend that provides the APIs required for the application to work.
+
+- [Free Time Spender Frontend](https://github.com/szilgyigbor/time-spender-frontend) - The ASP.NET backend that provides the APIs required for the application to work.
+
+These three projects together make up the complete Free Time Spender application.
   
